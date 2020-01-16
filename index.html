@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index_style.css">
+
+</head>
+
+<body>
+    <h1 class="text-center pt-3">Crud System</h1>
+   
+    <div class="container ">
+        <div class="form-group">
+            <label>Product Name:</label>
+            <input id="productNameInp" class="form-control ">
+            <div id="alertName" class="alert alert-danger" role="alert">
+                your productName is not valid
+                <small class="text-muted"> must be 3-10 characters long.</small>
+              </div>
+            
+
+
+        </div>
+        <div class="form-group">
+            <label>Product Price:</label>
+            <input id="productPriceInp" class="form-control ">
+            <div id="alertPrice"  class="alert alert-danger" role="alert">
+                your productPrice is not valid
+                <small class="text-muted"> must be 3-5 digit.</small>
+              </div>
+            
+
+        </div>
+        <div class="form-group">
+            <label>Product Category:</label>
+            <input id="productCategoryInp" class="form-control ">
+            <div id="alertCategory"  class="alert alert-danger" role="alert">
+                your productCategory is not valid
+                <small class="text-muted"> must be 2-15 characters long.</small>
+              </div>
+            
+            
+
+        </div>
+       
+        <div class="form-group">
+            <label>Product Desc:</label>
+            <textarea id="productDescInp" class="form-control "></textarea>
+            <div id="alertDesc"  class="alert alert-danger" role="alert">
+                your productDesc is not valid
+                <small class="text-muted"> must be 3-30 characters long.</small>
+              </div>
+            
+
+
+        </div>
+        <button id="myBtn" onclick="addProduct()" class="btn btn-info mt-3 float-right">addProduct</button>
+        <button id="my-btn" onclick="updateProduct()" class="btn btn-info mr-3 mt-3 float-right">updateProduct</button>
+
+    </div>
+    <div class="container-fluid pt-5">
+        <h2 class="text-center mt-5 ">Our Products</h2>
+        <input onkeyup="searchProducts(this.value)" class="form-control w-50 mx-auto mt-3 mb-5 " placeholder="search">
+        
+        <div class="row mt-5 pt-5" id="productsRow">
+            
+
+        </div>
+
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
